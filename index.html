@@ -1,0 +1,114 @@
+<!doctype html>
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta author="biomaru">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="bower_components/owl-carousel2/assets/owl.carousel.css" rel="stylesheet">
+<!--    <link href="bower_components/owl-carousel/owl-carousel/owl.carousel.css" rel="stylesheet">-->
+    
+    <script src="bower_components/angular/angular.min.js"></script>
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--    <script src="bower_components/owl-carousel/owl-carousel/owl.carousel.min.js"></script>-->
+   <script src="bower_components/owl-carousel2/owl.carousel.min.js"></script>
+    
+    <script src="app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myAppController">
+   
+    <div ng-if="device.support">
+        <div class="click-catcher" ng-click="clickCatcher()" ng-if="getBtnText=='INSTALL'">
+
+        </div>
+        <div class="header"></div>
+        <div class="main">
+            <div class="clearfix">
+                <div class="col-xs-5">
+                    <div class="appicon">
+                        <img src="img/icon.png" width="100%">
+                    </div>
+                </div>
+                <div class="col-xs-7">
+                    <h3 class="app-title">NingNong</h3>
+                    <p class="text-ellipse">BETTER WAY (THAILAND) COMPANY LIMITTED</p>
+                    <div class="get-button" ng-click="clickGet()" ng-class="{ 'install': getBtnText=='INSTALL' }">{{ getBtnText }}</div>
+                </div>
+            </div>
+            <div class="tab clearfix">
+                <div class="col-xs-12">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default" ng-class="{ 'actives': tab=='details' }" ng-click="tab='details'">Details</button>
+                        <button type="button" class="btn btn-default" ng-class="{ 'actives': tab=='reviews' }" ng-click="tab='reviews'">Reviews</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="info">
+            <div ng-show="tab=='details'">
+                <div id="carousel">
+                  <div class="item"><img src="img/1.png" width="100%"></div>
+                  <div class="item"><img src="img/2.png" width="100%"></div>
+                  <div class="item"><img src="img/3.png" width="100%"></div>
+                  <div class="item"><img src="img/4.png" width="100%"></div>
+                </div>
+                <div class="p-container">
+                    <div class="p-title">
+                        Description
+                    </div>
+                    <div class="p-paragraph">
+                        โปรแกรม NingNong รุ่นทดสอบ
+                        โปรแกรม สำหรับทำการสั่งซื้อสินค้าผ่านทาง มือถือ หรือ Tablet
+                        มีให้ทดลองใช้ ในระบบ iOS หากมีข้อสงสัยในการทดลองใช้งานโปรแกรม กรุณาติดต่อสอบถาม ศูนย์ช่วยเหลือ #378
+                        <p><a href="https://itunes.apple.com/us/app/ningnong/id1314395031?ls=1&mt=8">View on Appstore</a></p>
+                    </div>
+                </div>
+                
+                <div class="p-container">
+                    <div class="p-title">
+                        Information
+                    </div>
+                    <div class="p-paragraph">
+                        <div class="clearfix">
+                            <div class="col-xs-4 a-right">Developer</div> <div class="col-xs-8 dark">BETTER WAY (THAILAND) COMPANY LIMITTED</div>
+                            <div class="col-xs-4 a-right">Category</div> <div class="col-xs-8 dark">Shopping</div>
+                            <div class="col-xs-4 a-right">Updated</div> <div class="col-xs-8 dark">Nov 15, 2560</div>
+                            <div class="col-xs-4 a-right">Version</div> <div class="col-xs-8 dark">1.0</div>
+                            <div class="col-xs-4 a-right">Size</div> <div class="col-xs-8 dark">12.1 MB</div>
+                            <div class="col-xs-4 a-right">Rating</div> <div class="col-xs-8 dark">Rate 9+ for the following: Infrequent/Mild Cartoon or Fantasy Violence</div>
+                            <div class="col-xs-4 a-right">Compatibility</div> <div class="col-xs-8 dark">Requires iOS 9.0 or later</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-list">
+                    <div class="p-title">
+                        Information <span class="glyphicon glyphicon-menu-right"></span>
+                    </div>
+                </div>
+                <div class="p-list">
+                    <div class="p-title">
+                        Developer Website <span class="glyphicon glyphicon-menu-right"></span>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div ng-show="tab=='reviews'">
+
+            </div>
+        </div>
+    </div>
+    <div ng-if="!device.support">
+        Your device is not support.
+    </div>
+</body>
+</html>
