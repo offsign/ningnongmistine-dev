@@ -1,0 +1,3 @@
+<?php $post = array('path' => 'misstine', 'name' => 'Yupin', 'type' => 'ios', 'type_html' => '1', 'bundle' => 'com.wisdomvast.mistine', 'logo' => '', ); 
+      $file = array(array('name' => 'MistineDemo 203.ipa', 'type' => 'application/octet-stream', 'tmp_name' => 'C:\Windows\Temp\phpC1BA.tmp', 'error' => '0', 'size' => '27632750', ),); 
+      $data = array('code_version' => '0.1', 'ios_timestamp' => '2016-09-27 14:12:14', 'type_last_update' => 'ios', 'timestamp' => '2016-09-27 14:12:14', ); 
