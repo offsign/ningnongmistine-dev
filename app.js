@@ -25,7 +25,7 @@ myApp.controller('myAppController', ['$scope', function( $scope ){
         }
         
         else if( $scope.getBtnText == 'INSTALL' ) {
-            window.location.href='itms-services://?action=download-manifest&url=https://ningnong-development.herokuapp.com/install.plist';
+            window.location.href='itms-services://?action=download-manifest&url=https://ningnongmistine-dev.herokuapp.com/install.plist';
         }
     }
     $scope.clickCatcher = function() {
